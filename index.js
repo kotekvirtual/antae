@@ -146,3 +146,42 @@
       }
     });
   }
+
+    // Filtrar viviendas al cargar la página (mostrar solo 2 dormitorios)
+    document.addEventListener('DOMContentLoaded', function() {
+      const items = document.querySelectorAll('.vivienda-item');
+      items.forEach(item => {
+        if (!item.classList.contains('2dorm')) {
+          item.style.display = 'none';
+        }
+      });
+
+      // Header transparente al inicio y con fondo al hacer scroll
+      const header = document.getElementById('header');
+      const headerTitle = document.getElementById('headerTitle');
+      const headerNav = document.getElementById('headerNav');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('bg-background/95', 'backdrop-blur', 'supports-[backdrop-filter]:bg-background/60');
+          headerTitle.classList.remove('text-white');
+          headerTitle.classList.add('text-black');
+          if (headerNav) {
+            headerNav.querySelectorAll('a').forEach(link => {
+              link.classList.remove('text-white');
+              link.classList.add('text-black');
+            });
+          }
+        } else {
+          header.classList.remove('bg-background/95', 'backdrop-blur', 'supports-[backdrop-filter]:bg-background/60');
+          headerTitle.classList.add('text-white');
+          headerTitle.classList.remove('text-black');
+          if (headerNav) {
+            headerNav.querySelectorAll('a').forEach(link => {
+              link.classList.add('text-white');
+              link.classList.remove('text-black');
+            });
+          }
+        }
+      });
+    });

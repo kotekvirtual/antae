@@ -311,16 +311,13 @@
         </div>
       </div>
     </section>
-
-    
-
    
     <section id="ubicacion" class="py-16 md:py-24">
       <div class="container">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Ubicación privilegiada</h2>
         <div class="grid md:grid-cols-5 gap-8 items-center">
           <div class="md:col-span-3">
-            <iframe width="100%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=-8.377289772033693%2C43.32929853822845%2C-8.36312770843506%2C43.33624404906803&amp;layer=mapnik&amp;marker=43.33277139293852%2C-8.370208740234375" style="border: 1px solid black"></iframe>
+            <iframe width="100%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=-4.731829762458802%2C41.576741027420525%2C-4.724748730659486%2C41.58033652787866&amp;layer=mapnik&amp;marker=41.57853880267112%2C-4.728289246559143" style="border: 1px solid black"></iframe>
           </div>
           <div class="space-y-6 md:col-start-4 md:col-span-2">
             <div class="flex items-start gap-4">
@@ -365,7 +362,7 @@
             </div>
           </div>
           <div class="bg-foreground p-6 rounded-lg">
-            <form class="space-y-4" action="https://formspree.io/f/xldjenlv" method="POST">
+            <form class="space-y-4" action="" method="POST">
               <div class="grid md:grid-cols-1 gap-4">
                 <div>
                   <label for="nombre" class="block text-sm font-medium mb-2">
@@ -435,46 +432,7 @@
     </div>
   </footer>
 
-  <script>
-    // Filtrar viviendas al cargar la página (mostrar solo 2 dormitorios)
-    document.addEventListener('DOMContentLoaded', function() {
-      const items = document.querySelectorAll('.vivienda-item');
-      items.forEach(item => {
-        if (!item.classList.contains('2dorm')) {
-          item.style.display = 'none';
-        }
-      });
 
-      // Header transparente al inicio y con fondo al hacer scroll
-      const header = document.getElementById('header');
-      const headerTitle = document.getElementById('headerTitle');
-      const headerNav = document.getElementById('headerNav');
-
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-          header.classList.add('bg-background/95', 'backdrop-blur', 'supports-[backdrop-filter]:bg-background/60');
-          headerTitle.classList.remove('text-white');
-          headerTitle.classList.add('text-black');
-          if (headerNav) {
-            headerNav.querySelectorAll('a').forEach(link => {
-              link.classList.remove('text-white');
-              link.classList.add('text-black');
-            });
-          }
-        } else {
-          header.classList.remove('bg-background/95', 'backdrop-blur', 'supports-[backdrop-filter]:bg-background/60');
-          headerTitle.classList.add('text-white');
-          headerTitle.classList.remove('text-black');
-          if (headerNav) {
-            headerNav.querySelectorAll('a').forEach(link => {
-              link.classList.add('text-white');
-              link.classList.remove('text-black');
-            });
-          }
-        }
-      });
-    });
-  </script>
 </body>
 
 
