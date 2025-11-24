@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Edificio Antae es Tu nuevo hogar en Laguna de Duero, con terrazas amplias, piscina y rodeado de naturaleza. Descubre nuestras viviendas de 2, 3 y 4 dormitorios diseñadas para tu confort y calidad de vida.">
+  <meta name="description" content="Edificio Antae es tu nuevo hogar en Laguna de Duero, con terrazas amplias, piscina y rodeado de naturaleza. Descubre nuestras viviendas de 2, 3 y 4 dormitorios diseñadas para tu confort y calidad de vida.">
   <title>Edificio Antae</title>
   <link rel="icon" type="image/svg" href="/content/iconos/torcasa.webp">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,7 +37,7 @@
 <body class="flex flex-col min-h-screen">
   <header id="header" class="fixed top-0 z-50 w-full transition-all duration-300">
     <div class="container flex h-16 md:h-24 items-center justify-between">
-      <a href="/" class="flex items-center space-x-2">
+      <a href="#inicio" class="flex items-center space-x-2">
         <span id="headerTitle" class="text-xl md:text-2xl font-bold text-white">Edificio Antae</span>
       </a>
       <nav id="headerNav" class="hidden md:flex gap-6">
@@ -61,7 +61,7 @@
   </header>
   
   
-  <main class="flex-1">
+  <main id="inicio" class="flex-1">
     <section class="relative h-screen w-full overflow-hidden">
       <video 
         autoplay 
@@ -145,11 +145,11 @@
       <div class="container">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Galería</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_1.webp" alt="Exterior 1" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_1.webp')" loading="lazy">
-          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_2.webp" alt="Exterior 2" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_2.webp')" loading="lazy">
-          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_3.webp" alt="Exterior 3" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_3.webp')" loading="lazy">
-          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_4.webp" alt="Exterior 4" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_4.webp')" loading="lazy">
-          <img src="/content/thumbs/imagenes/VISTA TERRAZA PRINCIPAL.webp" alt="Vista Terraza Principal" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/VISTA TERRAZA PRINCIPAL.webp')" loading="lazy">
+          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_1.webp" alt="Exterior 1" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_1.webp')">
+          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_2.webp" alt="Exterior 2" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_2.webp')">
+          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_3.webp" alt="Exterior 3" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_3.webp')">
+          <img src="/content/thumbs/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_4.webp" alt="Exterior 4" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/2507_RB_RESIDENCIAL_LAGUNA_EXT_4.webp')">
+          <img src="/content/thumbs/imagenes/VISTA TERRAZA PRINCIPAL.webp" alt="Vista Terraza Principal" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openGaleriaModal('/content/full/imagenes/VISTA TERRAZA PRINCIPAL.webp')">
         </div>
       </div>
     </section>
@@ -173,28 +173,28 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="viviendasGrid">
           <!-- 2 Dormitorios -->
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/01_PORTAL1_BAJO_A.webp" alt="Portal 1 Bajo A" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/01_PORTAL1_BAJO_A.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/01_PORTAL1_BAJO_A.webp" alt="Portal 1 Bajo A" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/01_PORTAL1_BAJO_A.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/02_PORTAL4_BAJO_A.webp" alt="Portal 4 Bajo A" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/02_PORTAL4_BAJO_A.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/02_PORTAL4_BAJO_A.webp" alt="Portal 4 Bajo A" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/02_PORTAL4_BAJO_A.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/05_PORTAL1_PRIMERO_C.webp" alt="Portal 1 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/05_PORTAL1_PRIMERO_C.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/05_PORTAL1_PRIMERO_C.webp" alt="Portal 1 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/05_PORTAL1_PRIMERO_C.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/09_PORTAL2_PRIMERO_C.webp" alt="Portal 2 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/09_PORTAL2_PRIMERO_C.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/09_PORTAL2_PRIMERO_C.webp" alt="Portal 2 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/09_PORTAL2_PRIMERO_C.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/13_PORTAL3_PRIMERO_C.webp" alt="Portal 3 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/13_PORTAL3_PRIMERO_C.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/13_PORTAL3_PRIMERO_C.webp" alt="Portal 3 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/13_PORTAL3_PRIMERO_C.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/17_PORTAL4_PRIMERO_C.webp" alt="Portal 4 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/17_PORTAL4_PRIMERO_C.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/17_PORTAL4_PRIMERO_C.webp" alt="Portal 4 Primero C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/17_PORTAL4_PRIMERO_C.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/27_PORTAL3_SEGUNDO_C.webp" alt="Portal 3 Segundo C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/27_PORTAL3_SEGUNDO_C.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/27_PORTAL3_SEGUNDO_C.webp" alt="Portal 3 Segundo C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/27_PORTAL3_SEGUNDO_C.webp')" />
           </div>
           <div class="vivienda-item 2dorm rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
-            <img src="/content/thumbs/fichas/2dorm/31_PORTAL4_SEGUNDO_C.webp" alt="Portal 4 Segundo C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/31_PORTAL4_SEGUNDO_C.webp')" loading="lazy" />
+            <img src="/content/thumbs/fichas/2dorm/31_PORTAL4_SEGUNDO_C.webp" alt="Portal 4 Segundo C" class="w-full h-64 object-cover cursor-pointer" onclick="openFichaModal('/content/full/fichas/2dorm/31_PORTAL4_SEGUNDO_C.webp')" />
           </div>
 
           <!-- 3 Dormitorios -->
@@ -311,13 +311,12 @@
         </div>
       </div>
     </section>
-   
     <section id="ubicacion" class="py-16 md:py-24">
       <div class="container">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Ubicación privilegiada</h2>
         <div class="grid md:grid-cols-5 gap-8 items-center">
           <div class="md:col-span-3">
-            <iframe width="100%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=-4.731829762458802%2C41.576741027420525%2C-4.724748730659486%2C41.58033652787866&amp;layer=mapnik&amp;marker=41.57853880267112%2C-4.728289246559143" style="border: 1px solid black"></iframe>
+            <iframe width="100%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=-4.737349748611451%2C41.57501945019823%2C-4.719432592391969%2C41.58221044262433&amp;layer=mapnik&amp;marker=41.57861504649745%2C-4.728391170501709" style="border: 1px solid black"></iframe>
           </div>
           <div class="space-y-6 md:col-start-4 md:col-span-2">
             <div class="flex items-start gap-4">
