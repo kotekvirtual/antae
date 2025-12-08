@@ -361,7 +361,7 @@
             </div>
           </div>
           <div class="bg-background p-6 rounded-lg">
-            <form class="space-y-4" action="" method="POST">
+            <form id="contact-form" class="space-y-4" action="https://formspree.io/f/mblnaajo" method="POST">
               <div class="grid md:grid-cols-1 gap-4">
                 <div>
                   <label for="nombre" class="block text-sm font-medium mb-2">
@@ -369,6 +369,12 @@
                   </label>
                   <input id="nombre" placeholder="Tu nombre" name="nombre" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
                 </div>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">
+                  Email
+                </label>
+                <input id="email" type="email" placeholder="Tu email" name="email" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" />
               </div>
               <div>
                 <label for="telefono" class="block text-sm font-medium mb-2">
@@ -380,11 +386,12 @@
                 <label for="mensaje" class="block text-sm font-medium mb-2">
                   Mensaje
                 </label>
-                <textarea id="mensaje" placeholder="¿Qué te gustaría saber?" name="mensaje" class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">Hola, me interesa esta promoción y me gustaría hacer una visita. Un saludo</textarea>
+                <textarea id="mensaje" placeholder="¿Qué te gustaría saber?" name="mensaje" class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">Hola, me interesa la promoción Antae II y me gustaría hacer una visita. Un saludo</textarea>
               </div>
-              <button type="submit" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-foreground text-black hover:bg-primary hover:text-white h-10 px-4 py-2">
+              <button type="submit" id="contact-form-button" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-foreground text-black hover:bg-primary hover:text-white h-10 px-4 py-2">
                 Enviar
               </button>
+              <p id="contact-form-status" class="text-sm text-center"></p>
             </form>
           </div>
         </div>

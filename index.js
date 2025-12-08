@@ -7,6 +7,50 @@ const images = [
 ];
 let currentIndex = 0;
 
+// Manejar el formulario de contacto
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', handleContactFormSubmit);
+  }
+});
+
+async function handleContactFormSubmit(event) {
+  event.preventDefault();
+  const status = document.getElementById('contact-form-status');
+  const data = new FormData(event.target);
+  
+  try {
+    const response = await fetch(event.target.action, {
+      method: event.target.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    
+    if (response.ok) {
+      status.innerHTML = '✓ ¡Gracias por tu mensaje! Nos pondremos en contacto pronto.';
+      status.classList.remove('text-red-500');
+      status.classList.add('text-green-600');
+      event.target.reset();
+    } else {
+      const responseData = await response.json();
+      if (Object.hasOwn(responseData, 'errors')) {
+        status.innerHTML = responseData['errors'].map(error => error['message']).join(', ');
+      } else {
+        status.innerHTML = '✗ Error al enviar el formulario. Intenta de nuevo.';
+      }
+      status.classList.remove('text-green-600');
+      status.classList.add('text-red-500');
+    }
+  } catch (error) {
+    status.innerHTML = '✗ Error de conexión. Intenta de nuevo.';
+    status.classList.remove('text-green-600');
+    status.classList.add('text-red-500');
+  }
+}
+
 function openModal(element, index) {
   currentIndex = index;
   document.getElementById('modalImage').src = images[currentIndex];
